@@ -2,9 +2,8 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         const nomeTarefa = $('#nova-tarefa').val();
-        const novaTarefa = $('<li></li>');
-        $(`<li>${nomeTarefa}</li>`).appendTo(novaTarefa);
-        $(novaTarefa).appendTo('ul');
+        const novaTarefa = $('<li style="list-style:disc inside;"></li>').text(nomeTarefa);
+        $('ul').append(novaTarefa);
         $('#nova-tarefa').val('');
-    })
-})
+    });
+});
